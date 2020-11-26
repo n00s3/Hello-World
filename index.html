@@ -27,7 +27,6 @@
                 padding: 20px;
             }
             p {
-                border-right: 1px solid gray;
                 width: 100px;
                 margin: 0;
                 padding:20px; 
@@ -38,9 +37,21 @@
             }
             #article {
                 padding-left: 10px;
+                border-left: 1px solid gray;
             }
             #article ol {
                 color: brown;
+            }
+            @media(max-width:800px){
+                #grid{
+                    display: block;
+                }
+                #article {
+                    border-left: none;
+                }
+                h1 {
+                    border-bottom: none;
+                }
             }
         </style>
     </head>
