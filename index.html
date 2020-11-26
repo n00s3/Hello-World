@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html>    
     <head>
-        <meta charset="utf-8">
+        <!--static web, not dynamic-->
         <title>My Hello-world webpage</title>
-        <!--static web not dynamic-->
+        <meta charset="utf-8">
+        <style>
+            body{
+                margin: 0;
+            }
+            #active {
+                color: red;
+            }
+            .saw {
+                color: gray;
+            }
+            a {
+                color:black;
+                text-decoration: none;
+            }
+
+            h1 {
+                font-size: 45px;
+                text-align: center;
+                border-bottom: 1px solid gray;
+                margin: 0;
+                padding: 20px;
+            }
+            p {
+                border-right: 1px solid gray;
+                width: 100px;
+                margin: 0;
+                padding:20px; 
+            }
+            #grid{
+                display: grid;
+                grid-template-columns: 150px 1fr;
+            }
+            #article {
+                padding-left: 10px;
+            }
+            #article ol {
+                color: brown;
+            }
+        </style>
     </head>
 
-    <body>
+    <body>    
         <h1>Hello, world! UTF-8 한글</h1>
-        <p>Happy to see you!</p>
-        <p><a href="https://www.google.co.kr" target="_blank" title="google"><strong><u>Search</u></strong></a></p>
-        <iframe width="100%" height="554" 
-            src="https://www.youtube.com/embed/000000" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-        <ul><!--unordered list-->
-            <li><a href="About.html">About</a></li>
-            <li>1. HTML</li>
-            <li>2. CSS</li>
-            <li>3. JavaScript</li>
-        </ul>
-        <ol><!--ordered list-->
-            <li>hd1580</li>
-            <li>hd15807</li>
-            <li>noose</li>
-        </ol>
-
-        <table>
-            <tr>
-                <td>head</td>
-                <td>98.1%</td>
-            </tr>
-            <tr>
-                <td>body</td>
-                <td>97.9%</td>
-            </tr>
-            <tr>
-                <td>html</td>
-                <td>97.9%</td>
-            </tr>
-        </table>
-
-
-        <img src="images/python.png" width="100%" height="100%">
-        <!--unplash-->
-    
-        <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://web1-rttugmttzo.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            
+        <div id="grid">
+            <div>
+                <p>Happy to see <u>you!</u></p>
+            </div>
+            <div id="article">
+                <a href="https://www.google.co.kr" class="saw" target="_blank" title="google"><strong>Search</strong></a>
+                <a href="https://www.youtube.com" class="saw" id="active" target="_blank" title="youtube"><strong>Watch</strong></a>
+                <ul><!--unordered list-->
+                    <li><a href="About.html">About</a></li>
+                    <li>1. HTML</li>
+                    <li style="color:red; text-decoration: underline;"><a href="box.html">2. CSS</a></li>
+                    <li>3. JavaScript</li>
+                </ul>
+                <ol><!--ordered list-->
+                    <li>hd1580</li>
+                    <li>hd15807</li>
+                    <li>noose</li>
+                </ol>
+        </div>
     </body>
+    <div>
+        <img src="images/python.png">
+    <!--unplash-->
+    </div>
 
 
 
