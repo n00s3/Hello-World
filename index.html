@@ -54,10 +54,53 @@
                 }
             }
         </style>
+
+        <script>
+            var Links = {
+                setColor:function(color) {
+                    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < alist.length) {
+                        alist[i].style.color = color;
+                        i += 1;
+                    }
+                }
+            }
+
+            var Body = {
+                setColor:function(color) {
+                    document.querySelector('body').style.color = color;
+                },
+                setBackgroundColor:function(color) {
+                    //Selector single
+                    //SelectorAll multiple 
+                    document.querySelector('body').style.backgroundColor = color;
+                }
+            }
+            function nightDayHandler(self) {
+                if(self.value === 'night') {
+                    Body.setBackgroundColor('black');
+                    Body.setColor('white');
+                    self.value = 'day';
+                
+                    Links.setColor('powderblue');
+                
+                } else {
+                    Body.setBackgroundColor('white');
+                    Body.setColor('black');
+                    self.value = 'night';
+                
+                    Links.setColor('blue');
+                }
+            }
+        </script>
     </head>
 
-    <body>    
+    <body">   
+        <input style="margin-left: 10px;" type="button" value="night" onclick="nightDayHandler(this);">
+        
         <h1>Hello, world! UTF-8 한글</h1>
+        
         <div id="grid">
             <div>
                 <p>Happy to see <u>you!</u></p>
@@ -66,10 +109,9 @@
                 <a href="https://www.google.co.kr" class="saw" target="_blank" title="google"><strong>Search</strong></a>
                 <a href="https://www.youtube.com" class="saw" id="active" target="_blank" title="youtube"><strong>Watch</strong></a>
                 <ul><!--unordered list-->
-                    <li><a href="About.html">About</a></li>
-                    <li>1. HTML</li>
-                    <li style="color:red; text-decoration: underline;"><a href="box.html">2. CSS</a></li>
-                    <li>3. JavaScript</li>
+                    <li style="text-decoration: underline;"><a href="About.html">1. HTML</a></li>
+                    <li style="text-decoration: underline;"><a href="box.html">2. CSS</a></li>
+                    <li style="text-decoration: underline;"><a href="scriptex.html">3. JavaScript</a></li>
                 </ul>
                 <ol><!--ordered list-->
                     <li>hd1580</li>
@@ -81,6 +123,8 @@
     <div>
         <img src="images/python.png">
     <!--unplash-->
+        <input style="margin-left: 10px;" type="button" value="night" onclick="nightDayHandler(this);">
+
     </div>
 
 
